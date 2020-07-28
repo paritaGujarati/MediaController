@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MediaControllerDemo</string>
+    <string name="description">Media Controls</string>
+    <string name="VideoView_error_text_invalid_progressive_playback">player not support this device</string>
+    <string name="VideoView_error_text_unknown">can not play this video, apply internet in manifiest</string>
+    <string name="VideoView_error_button">Ok</string>
+</resources>
