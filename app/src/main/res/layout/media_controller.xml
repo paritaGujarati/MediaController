@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:background="#CC000000"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -93,7 +94,8 @@
             android:contentDescription="@string/description"
             android:paddingLeft="10dip"
             android:paddingRight="4dip"
-            android:src="@drawable/ic_outline_aspect_ratio_24" />
+            android:src="@drawable/ic_outline_aspect_ratio_24"
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@+id/fullscreen"
