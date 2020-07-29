@@ -1,4 +1,4 @@
-package com.ecreate.mediacontroller;
+package com.ecreate.library;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -211,7 +211,7 @@ public class MediaController extends FrameLayout {
      */
     protected View makeControllerView() {
         LayoutInflater inflate = LayoutInflater.from(getContext());
-        mRoot = inflate.inflate(com.ecreate.library.R.layout.media_controller, null);
+        mRoot = inflate.inflate(R.layout.media_controller, null);
 
         initControllerView(mRoot);
 
@@ -229,18 +229,18 @@ public class MediaController extends FrameLayout {
 //            mBackButton.setOnClickListener(mBackListener);
 //        }
 
-        mAspectratio = (ImageButton) v.findViewById(com.ecreate.library.R.id.aspectratio);
+        mAspectratio = (ImageButton) v.findViewById(R.id.aspectratio);
         if (mAspectratio != null) {
             mAspectratio.setOnClickListener(mAspectListener);
         }
 
-        mPauseButton = (ImageButton) v.findViewById(com.ecreate.library.R.id.pause);
+        mPauseButton = (ImageButton) v.findViewById(R.id.pause);
         if (mPauseButton != null) {
             mPauseButton.requestFocus();
             mPauseButton.setOnClickListener(mPauseListener);
         }
 
-        mFfwdButton = (ImageButton) v.findViewById(com.ecreate.library.R.id.ffwd);
+        mFfwdButton = (ImageButton) v.findViewById(R.id.ffwd);
         if (mFfwdButton != null) {
             mFfwdButton.setOnClickListener(mFfwdListener);
             if (!mFromXml) {
@@ -248,7 +248,7 @@ public class MediaController extends FrameLayout {
             }
         }
 
-        mRewButton = (ImageButton) v.findViewById(com.ecreate.library.R.id.rew);
+        mRewButton = (ImageButton) v.findViewById(R.id.rew);
         if (mRewButton != null) {
             mRewButton.setOnClickListener(mRewListener);
             if (!mFromXml) {
@@ -257,27 +257,27 @@ public class MediaController extends FrameLayout {
         }
 
         // By default these are hidden. They will be enabled when setPrevNextListeners() is called
-        mNextButton = (ImageButton) v.findViewById(com.ecreate.library.R.id.next);
+        mNextButton = (ImageButton) v.findViewById(R.id.next);
         if (mNextButton != null && !mFromXml && !mListenersSet) {
             mNextButton.setVisibility(View.GONE);
         }
-        mPrevButton = (ImageButton) v.findViewById(com.ecreate.library.R.id.prev);
+        mPrevButton = (ImageButton) v.findViewById(R.id.prev);
         if (mPrevButton != null && !mFromXml && !mListenersSet) {
             mPrevButton.setVisibility(View.GONE);
         }
 
-        mProgress = (SeekBar) v.findViewById(com.ecreate.library.R.id.mediacontroller_progress);
+        mProgress = (SeekBar) v.findViewById(R.id.mediacontroller_progress);
         if (mProgress != null) {
             mProgress.setOnSeekBarChangeListener(mSeekListener);
             mProgress.setMax(1000);
         }
 
-        mEndTime = (TextView) v.findViewById(com.ecreate.library.R.id.time);
-        mCurrentTime = (TextView) v.findViewById(com.ecreate.library.R.id.time_current);
+        mEndTime = (TextView) v.findViewById(R.id.time);
+        mCurrentTime = (TextView) v.findViewById(R.id.time_current);
         mFormatBuilder = new StringBuilder();
         mFormatter = new Formatter(mFormatBuilder, Locale.getDefault());
 
-        mFullscreen = (ImageButton) v.findViewById(com.ecreate.library.R.id.fullscreen);
+        mFullscreen = (ImageButton) v.findViewById(R.id.fullscreen);
         if (mFullscreen != null) {
             mFullscreen.setOnClickListener(mFullScreenListener);
         }
@@ -528,10 +528,10 @@ public class MediaController extends FrameLayout {
             return;
 
         if (mPlayer.isPlaying()) {
-            mPauseButton.setImageResource(com.ecreate.library.R.drawable.ic_media_pause);
+            mPauseButton.setImageResource(R.drawable.ic_media_pause);
 //            mPauseButton.setContentDescription(mPauseDescription);
         } else {
-            mPauseButton.setImageResource(com.ecreate.library.R.drawable.ic_media_play);
+            mPauseButton.setImageResource(R.drawable.ic_media_play);
 //            mPauseButton.setContentDescription(mPlayDescription);
         }
     }

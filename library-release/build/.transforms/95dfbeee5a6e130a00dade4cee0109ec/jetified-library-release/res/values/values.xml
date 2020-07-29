@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_overlay">#66000000</color>
+    <string name="VideoView_error_button">Ok</string>
+    <string name="VideoView_error_text_invalid_progressive_playback">player not support this device</string>
+    <string name="VideoView_error_text_unknown">can not play this video, apply internet in manifiest</string>
+    <string name="app_name">MediaController</string>
+    <string name="description">Media Controls</string>
+</resources>

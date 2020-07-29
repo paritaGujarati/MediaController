@@ -1,4 +1,4 @@
-package com.ecreate.mediacontroller;
+package com.ecreate.library;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -307,9 +307,9 @@ public class VideoView extends SurfaceView implements MediaController.MediaPlaye
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 500
         );
-        View secondLayerView = LayoutInflater.from(context).inflate(com.ecreate.library.R.layout.progress_layout, null, false);
+        View secondLayerView = LayoutInflater.from(context).inflate(R.layout.progress_layout, null, false);
         context.addContentView(secondLayerView, frameParams);
-        mProgressLayout = (RelativeLayout) secondLayerView.findViewById(com.ecreate.library.R.id.mProgressLayout);
+        mProgressLayout = (RelativeLayout) secondLayerView.findViewById(R.id.mProgressLayout);
 
         if (mMediaPlayer != null && mMediaController != null) {
             mMediaController.setMediaPlayer(this);
@@ -431,14 +431,14 @@ public class VideoView extends SurfaceView implements MediaController.MediaPlaye
                         int messageId;
 
                         if (framework_err == MediaPlayer.MEDIA_ERROR_NOT_VALID_FOR_PROGRESSIVE_PLAYBACK) {
-                            messageId = com.ecreate.library.R.string.VideoView_error_text_invalid_progressive_playback;
+                            messageId = R.string.VideoView_error_text_invalid_progressive_playback;
                         } else {
-                            messageId = com.ecreate.library.R.string.VideoView_error_text_unknown;
+                            messageId = R.string.VideoView_error_text_unknown;
                         }
 
                         new AlertDialog.Builder(getContext())
                                 .setMessage(messageId)
-                                .setPositiveButton(com.ecreate.library.R.string.VideoView_error_button,
+                                .setPositiveButton(R.string.VideoView_error_button,
                                         new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int whichButton) {
                                                 /* If we get here, there is no onError listener, so
