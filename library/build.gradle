@@ -32,14 +32,14 @@ dependencies {
 }
 
 task deleteJar(type: Delete) {
-    delete 'libs/jars/classes.jar'
+    delete 'libs/jars/mediacontroller.jar'
 }
 
 task createJar(type: Copy) {
-    from('build/intermediates/bundles/release/')
+    from('build/intermediates/aar_main_jar/release/')
     into('libs/jars/')
     include('classes.jar')
-    rename('classes.jar', 'classes.jar')
+    rename('classes.jar', 'mediacontroller.jar')
 }
 
 createJar.dependsOn(deleteJar, build)
