@@ -1,4 +1,4 @@
-package com.ecreate.library;
+package com.ecreate.mediacontroller;
 
 import android.content.Context;
 import android.media.MediaPlayer;

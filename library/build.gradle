@@ -31,15 +31,3 @@ dependencies {
 
 }
 
-task deleteJar(type: Delete) {
-    delete 'libs/jars/classes.jar'
-}
-
-task createJar(type: Copy) {
-    from('build/intermediates/bundles/release/')
-    into('libs/jars/')
-    include('classes.jar')
-    rename('classes.jar', 'classes.jar')
-}
-
-createJar.dependsOn(deleteJar, build)
